@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import sessionmaker, DeclarativeBase
 
 from src.config import secret_keys
 
@@ -16,4 +16,5 @@ def get_db():
         db.close()
 
 
-Base = declarative_base()
+class Base(DeclarativeBase):
+    pass
