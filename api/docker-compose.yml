@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sketchpad-api
+    container_name: sketchpad_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:18.4
+    container_name: sketchpad_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: sketchpad
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass123
+    volumes:
+      - sketchpad_db:/var/lib/postgresql
+
+volumes:
+  sketchpad_db:
