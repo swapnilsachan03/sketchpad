@@ -1,7 +1,6 @@
 from logging.config import fileConfig
 
 from alembic import context
-from alembic.templates.generic.env import target_metadata
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
