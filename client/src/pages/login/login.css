@@ -1,0 +1,14 @@
+.login-container {
+  height: 100vh;
+  background-color: #ffffff;
+  background-image: radial-gradient(#cbd5e1 0.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.login-card {
+  background-color: #ffffff;
+  width: 360px;
+  padding: 24px;
+  box-shadow: var(--shadow-4);
+  border-radius: 16px;
+}

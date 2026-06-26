@@ -1,0 +1,13 @@
+.new-sketch-card {
+  background-color: #f6f6f6;
+  opacity: 0.8;
+  background-size: 16px 16px;
+  border: 3px dashed #d3d3d3;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--plum-3);
+    cursor: pointer;
+  }
+}
